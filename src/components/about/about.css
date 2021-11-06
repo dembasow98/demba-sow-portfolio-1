@@ -1,90 +1,106 @@
-.a{
+.a {
     height: 100vh;
     display: flex;
     align-items: center;
 }
-.a-left{
+
+.a-left {
     flex: 1;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     position: relative;
-    background-color: red;
     height: 100%;
 }
-.a-right{
+
+.a-right {
     flex: 1;
-    background-color: blue;
-    height: 100%;
 }
 .a-card.bg{
     position: absolute;
-    top:50px;
+    top: 50px;
     left: 50px;
-    background-color: #333;
+    background-color: #444;
 }
 .a-card{
-    width:60%;
+    width: 60%;
     height: 70vh;
     border-radius: 30px;
     position: relative;
     overflow: hidden;
 }
+.a-title{
+    font-weight: 400;
+}
+.a-sub-title{
+    margin:20px 0px;
+}
+.a-description{
+    font-weight: 300;
+}
+
 
 .a-img{
-    height: 100%;
     width: 100%;
+    height:100%;
     object-fit: cover;
 }
-.a-title,.a-sub-title, .description{
-   position: relative;
-   margin: 20px;
+
+.a-award{
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.a-award-img{
+    width: 150px;
+    height: 200px;
+    border-radius: 20px;
 }
 
-.a-certificates{
-   overflow: hidden;
-   background-color: brown;
-   margin: 0;
-   padding: 0;
-   object-fit: cover;
+.a-award-title{
+    font-weight: bold;
+    color: grey;
+    margin-bottom: 10px;
 }
-.a-certificates-wrapper{
-    width: 60%;
-    height: 70vh;
-    background-color: #fff;
-    object-fit: cover;
-    justify-content: center;
+.a-award-texts{
+    width: 70%;
 }
 
-.a-certificate{
 
+/*.a-title {
+font-weight: 400;
 }
-.html-certificate,
-.css-certificate,
-.javascript-certificate,
-.react-certificate,
-.react-native-certificate,
-.flutter-certificate,
-.django-certificate,
-.python-certificate,
-.java-certificate,
-.c-certificate,
-.cpp-certificate,
-.c-sharp-certificate{
-    width: 50%;
-    height: 50%;
-    object-fit: contain;
-    border-radius: 30px;
-}
-/*.a-certificates-wrapper{
-    animation: certificateSlide 10s ease-in-out infinite alternate;
 
+.a-sub-title {
+margin: 20px 0px;
 }
-@keyframes certificateSlide {
-    0%{
-      transform: skewX(50deg) translateX(-100px);
+
+.a-description{
+    font-weight: 300;
+}*/
+
+
+/* @media screen and (max-width:480px) {
+    .a{
+    flex-direction: column;
+    text-align: center;
+    margin-top: 50px;
     }
-    100%{
-        transform: skew(0deg)
+
+    .a-left {
+    width: 100%;
+    }
+
+    .a-card {
+    height: 30vh;
+    }
+
+    .a-card.bg, .a-award {
+    display: none;
+    }
+
+    .a-right{
+    padding: 20px;
     }
 }*/
