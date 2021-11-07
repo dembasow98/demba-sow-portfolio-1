@@ -1,3 +1,9 @@
+1)USE OF EMAIL JS:
+>yarn add emailjs-com
+
+--------------------------------------
+2)USE OF CONTEXT API:
+>
 <div className="a-certificates">
                     <div className="a-certificates-wrapper">
                        {/* <div className="a-radio-box">
