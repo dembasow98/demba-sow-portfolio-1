@@ -1,11 +1,13 @@
 import "./contact.css"
-import React, { useContext, useRef, useState } from 'react';
+import React, { useContext, useRef, useState, useEffect } from 'react';
 import emailjs from 'emailjs-com';
 import { ThemeContext } from "../../contextApi";
+
 
 const Contact=()=> {
 
     const [sent, sentDone] = useState(false);
+
 
 
     const theme = useContext(ThemeContext);
@@ -15,14 +17,16 @@ const Contact=()=> {
     const formRef = useRef();
     const sendEmail = (e)=>{
         e.preventDefault();
-
         emailjs.sendForm('service_ds3mp57', 'template_j0d3oki', formRef.current, 'user_1NJkUnSkzj9Sd7gs2XnKV')
         .then((result) => {
             console.log(result.text);
+            sentDone(true);
         }, (error) => {
             console.log(error.text);
         });
     };
+
+
     return (
         <div className="c">
             <div className="c-bg"></div>
@@ -56,6 +60,7 @@ const Contact=()=> {
                         <input style={{backgroundColor:darkMode && "#333"}} type="text" placeholder="Enter Your Email Here" name="user_email" />
                         <textarea style={{backgroundColor:darkMode && "#444"}} name="message" id="" rows="5" placeholder="Write Your Message Here"></textarea>
                         <button>Send</button>
+                        {sent &&"Your Message Has Been Sent. Thank You For Contacting Us..."}
                     </form>
                 </div>
             </div>
